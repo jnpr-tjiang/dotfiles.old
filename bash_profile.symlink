@@ -1,0 +1,15 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin
+
+export PATH
+alias attachapi='docker exec -it config_api_1 bash -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; exec bash"'
+alias attachdm='docker exec -it config_devicemgr_1 bash -c "export COLUMNS=`tput cols`; export LINES=`tput lines`; exec bash"'
+
